@@ -1,7 +1,7 @@
 {
   "name": "story-bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "Discord story bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "discord.js": "^14.25.1"
+    "discord.js": "^14.25.1",
+    "dotenv": "^16.3.1"
   }
 }
