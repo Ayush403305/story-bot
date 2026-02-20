@@ -1,3 +1,4 @@
+require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
@@ -67,4 +68,4 @@ function resetTimer(channel) {
     }, 60000);
 }
 
-client.login("***REMOVED***");
+client.login(process.env.BOT_TOKEN);
