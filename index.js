@@ -1,6 +1,13 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
+const express = require("express");
+const app = express();
 
+app.get("/", (req, res) => {
+    res.send("Story bot is alive");
+});
+
+app.listen(process.env.PORT || 10000);
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
