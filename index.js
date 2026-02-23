@@ -26,6 +26,9 @@ client.on("ready", () => {
 });
 
 client.on("messageCreate", async (message) => {
+
+    console.log("Message received:", message.content);
+
     if (message.author.bot) return;
 
     if (message.content === "!startstory") {
