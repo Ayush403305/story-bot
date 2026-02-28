@@ -8,6 +8,9 @@ app.get("/", (req, res) => {
 });
 
 app.listen(process.env.PORT || 10000);
+app.listen(PORT, () => {
+    console.log("Express server running on port " + PORT);
+});
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -78,4 +81,6 @@ function resetTimer(channel) {
     }, 60000);
 }
 
-client.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN)
+  .then(() => console.log("Login attempt successful"))
+  .catch(err => console.error("Login error:", err));
