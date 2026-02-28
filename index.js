@@ -7,7 +7,8 @@ app.get("/", (req, res) => {
     res.send("Story bot is alive");
 });
 
-app.listen(process.env.PORT || 10000);
+const PORT = process.env.PORT || 10000;
+
 app.listen(PORT, () => {
     console.log("Express server running on port " + PORT);
 });
