@@ -81,7 +81,7 @@ function resetTimer(channel) {
         }
     }, 60000);
 }
-
+console.log("BOT TOKEN EXISTS:", !!process.env.BOT_TOKEN);
 client.login(process.env.BOT_TOKEN)
   .then(() => console.log("Login attempt successful"))
   .catch(err => console.error("Login error:", err));
